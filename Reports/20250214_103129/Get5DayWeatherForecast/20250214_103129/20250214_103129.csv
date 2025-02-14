@@ -1,0 +1,4 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Get5DayWeatherForecast,,,,14-02-2025 10:31:40,14-02-2025 10:31:41,0.646s,ERROR
+,,,,,,,
+Test Cases/Get5DayWeatherForecast,,,,14-02-2025 10:31:40,14-02-2025 10:31:41,0.308s,ERROR

@@ -1,0 +1,6 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+GetCurrentAirPollution,,,,14-02-2025 14:07:09,14-02-2025 14:07:10,0.856s,ERROR
+,,,,,,,
+Test Cases/GetCurrentAirPollution,,,,14-02-2025 14:07:09,14-02-2025 14:07:10,0.540s,ERROR
+"pollutionUrl = ""http://api.openweathermap.org/data/2.5/air_pollution?lat=-6.3035&lon=106.7469&appid=YOUR_API_KEY""",,,,14-02-2025 14:07:10,14-02-2025 14:07:10,0.009s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/AirPollutionRequest"", [""url"":pollutionUrl]))",,,,14-02-2025 14:07:10,14-02-2025 14:07:10,0.081s,ERROR

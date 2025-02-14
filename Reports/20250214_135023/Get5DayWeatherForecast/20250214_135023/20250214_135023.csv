@@ -1,0 +1,18 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Get5DayWeatherForecast,,,,14-02-2025 13:50:37,14-02-2025 13:50:44,6.772s,PASSED
+,,,,,,,
+Test Cases/Get5DayWeatherForecast,,,,14-02-2025 13:50:38,14-02-2025 13:50:44,6.355s,PASSED
+"weatherUrl = ""https://api.openweathermap.org/data/2.5/forecast?lat=-6.3035&lon=106.7469&appid=fd62756a7312a96b27b13b6fcd69cfe6""",,,,14-02-2025 13:50:38,14-02-2025 13:50:38,0.009s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/WeatherForecastRequest"", [""url"":weatherUrl]))",,,,14-02-2025 13:50:38,14-02-2025 13:50:43,4.984s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,14-02-2025 13:50:43,14-02-2025 13:50:43,0.075s,PASSED
+jsonResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,14-02-2025 13:50:43,14-02-2025 13:50:44,0.099s,PASSED
+assert jsonResponse != null,,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.017s,PASSED
+"verifyElementPropertyValue(response, ""city.coord.lat"", -6.3035)",,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.189s,PASSED
+"verifyElementPropertyValue(response, ""city.coord.lon"", 106.7469)",,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.109s,PASSED
+"verifyElementPropertyValue(response, ""list.size()"", 40)",,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.083s,PASSED
+assert temp != null,,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.024s,PASSED
+assert description != null,,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.009s,PASSED
+"assert getResponseBodyContent().startsWith(""{"") && getResponseBodyContent().endsWith(""}"")",,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.010s,PASSED
+if (rain != null),,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.012s,PASSED
+assert response.getResponseBodyContent() != null,,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.013s,PASSED
+assert trim().length() > 0,,,,14-02-2025 13:50:44,14-02-2025 13:50:44,0.003s,PASSED

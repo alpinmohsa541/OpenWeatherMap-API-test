@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Get5DayWeatherForecast,,,,14-02-2025 11:06:25,14-02-2025 11:06:30,4.811s,FAILED
+,,,,,,,
+Test Cases/Get5DayWeatherForecast,,,,14-02-2025 11:06:25,14-02-2025 11:06:30,4.372s,FAILED
+"weatherUrl = ""https://api.openweathermap.org/data/2.5/forecast?lat=-6.3035&lon=106.7469&appid=fd62756a7312a96b27b13b6fcd69cfe6""",,,,14-02-2025 11:06:26,14-02-2025 11:06:26,0.010s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/WeatherForecastRequest"", [""url"":weatherUrl]))",,,,14-02-2025 11:06:26,14-02-2025 11:06:29,3.372s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,14-02-2025 11:06:29,14-02-2025 11:06:29,0.075s,PASSED
+jsonResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,14-02-2025 11:06:29,14-02-2025 11:06:29,0.123s,PASSED
+assert jsonResponse != null,,,,14-02-2025 11:06:29,14-02-2025 11:06:29,0.025s,PASSED
+"verifyElementPropertyValue(response, ""city.name"", ""Jakarta Selatan"")",,,,14-02-2025 11:06:29,14-02-2025 11:06:30,0.251s,FAILED

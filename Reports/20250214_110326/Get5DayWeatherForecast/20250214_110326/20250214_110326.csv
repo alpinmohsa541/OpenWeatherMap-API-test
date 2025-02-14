@@ -1,0 +1,6 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Get5DayWeatherForecast,,,,14-02-2025 11:03:36,14-02-2025 11:03:37,1.273s,FAILED
+,,,,,,,
+Test Cases/Get5DayWeatherForecast,,,,14-02-2025 11:03:36,14-02-2025 11:03:37,0.881s,FAILED
+"weatherUrl = ""https://api.openweathermap.org/data/2.5/forecast?lat=-6.3035&lon=106.7469&appid=fd62756a7312a96b27b13b6fcd69cfe6""",,,,14-02-2025 11:03:37,14-02-2025 11:03:37,0.030s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/WeatherForecastRequest"", [""url"":weatherUrl]))",,,,14-02-2025 11:03:37,14-02-2025 11:03:37,0.327s,FAILED
